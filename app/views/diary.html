@@ -1,1 +1,13 @@
-<p>This is the diary view.</p>
+<paper-header-panel mode="waterfall">
+  <paper-toolbar>
+    <div class="title">Hello World!</div>
+  </paper-toolbar>
+  
+  <ul>
+    <li ng-repeat="diaryEntry in diaryEntries">
+      <a href="#/entry/{{diaryEntry.id}}">{{diaryEntry.title}}</a>
+      <p>{{diaryEntry.date}}</p>
+      <p>{{diaryEntry.snippet}}</p>
+    </li>
+  </ul>
+</paper-header-panel>

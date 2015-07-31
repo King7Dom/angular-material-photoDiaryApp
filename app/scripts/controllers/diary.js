@@ -8,10 +8,8 @@
  * Controller of the photoDiaryApp
  */
 angular.module('photoDiaryApp')
-  .controller('DiaryCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('DiaryCtrl', ['$scope', 'diaryEntryService', 
+    function ($scope, diaryEntryService) {
+      $scope.diaryEntries = diaryEntryService.diaryEntries();
+    }
+  ]);
