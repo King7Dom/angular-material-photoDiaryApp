@@ -19,9 +19,10 @@
     <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
     <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html ">
     <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-menu/paper-menu.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
-    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -34,24 +35,23 @@
     <![endif]-->
 
     <paper-drawer-panel>
-
-      <div drawer>
-        <paper-header-panel>
-          <paper-toolbar>
-            <paper-icon-button icon="face"></paper-icon-button>
-            <div class="title">Photo Diary</div>
-          </paper-toolbar>
-        </paper-header-panel>
+      <paper-header-panel drawer>
+        <paper-toolbar>
+          <paper-icon-button icon="face"></paper-icon-button>
+          <div class="title">Photo Diary</div>
+        </paper-toolbar>
         <paper-menu>
-          <paper-item>Diary</paper-item>
-          <paper-item>Photos</paper-item>
+          <paper-item class="flex" role="listitem">
+            <a ng-href="#/diary">Diary</a>
+          </paper-item>
+          <paper-item class="flex" role="listitem">
+            <a ng-href="#/photo">Photos</a>
+          </paper-item>
         </paper-menu>
-      </div><!-- End of drawer -->
+      </paper-header-panel><!-- End of drawer -->
 
       <div main>
-        <div class="container">
         <div ng-view=""></div>
-        </div>
 
         <div class="footer">
           <div class="container">
