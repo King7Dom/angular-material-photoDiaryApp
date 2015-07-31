@@ -29,6 +29,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/diary', {
+        templateUrl: 'views/diary.html',
+        controller: 'DiaryCtrl',
+        controllerAs: 'diary'
+      })
       .otherwise({
         redirectTo: '/'
       });
