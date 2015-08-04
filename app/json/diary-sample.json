@@ -22,5 +22,29 @@
         "img": "star-wars-vi.jpg",
         "snippet": "Luke Skywalker has returned to his home planet of Tatooine.",
         "content": "Luke Skywalker has returned to his home planet of Tatooine in an attempt to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt. Little does Luke know that the GALACTIC EMPIRE has secretly begun construction on a new armored space station even more powerful than the first dreaded Death Star. When completed, this ultimate weapon will spell certain doom for the small band of rebels struggling to restore freedom to the galaxy..."
+    },
+    {
+        "id": 3,
+        "title": "THE PHANTOM MENACE",
+        "date": "February 10, 2012",
+        "img": "star-wars-i.png",
+        "snippet": "Turmoil has engulfed the Galactic Republic. The taxation of trade routes to outlying star systems is in dispute.",
+        "content": "Turmoil has engulfed the Galactic Republic. The taxation of trade routes to outlying star systems is in dispute.\n\nHoping to resolve the matter with a blockade of deadly battleships, the greedy Trade Federation has topped all shipping to the small planet of Naboo.\n\nWhile the Congress of the Republic endlessly debates this alarming chain of events, the Supreme Chancellor has secretly dispatched two Jedi Knights, the guardians of peace and justice in the galaxy, to settle the conflict..."
+    },
+    {
+        "id": 3,
+        "title": "ATTACK OF THE CLONES",
+        "date": "May 16, 2002",
+        "img": "star-wars-ii.png",
+        "snippet": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic.",
+        "content": "There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic.\n\nThis separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain  peace and order in the galaxy.\n\nSenator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi..."
+    },
+    {
+        "id": 4,
+        "title": "REVENGE OF THE SITH",
+        "date": "May 19, 2005",
+        "img": "star-wars-iii.png",
+        "snippet": "Turmoil has engulfed the Galactic Republic. The taxation of trade routes to outlying star systems is in dispute.",
+        "content": "War! The Republic is crumbling under attacks by the ruthless Sith Lord, Count Dooku. There are heroes on both sides. Evil is everywhere.\n\nIn a stunning move, the fiendish droid leader, General Grievous, has swept into the Republic capital and kidnapped Chancellor Palpatine, leader of the Galactic Senate.\n\nAs the Separatist Droid Army attempts to flee the besieged capital with their valuable hostage, two Jedi Knights lead a desperate mission to rescue the captive Chancellor..."
     }
 ]
