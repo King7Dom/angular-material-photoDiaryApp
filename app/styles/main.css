@@ -12,3 +12,12 @@ body {
 .mdl-layout__drawer {
   width: 100%;
 }
+
+.diary-card {
+	width: 100%;
+}
+
+.diary-card  > .mdl-card__title {
+	height: 240px;
+	color: #fff;
+}
