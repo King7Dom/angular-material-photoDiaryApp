@@ -7,7 +7,7 @@
  * # photoDiaryServices
  * Factory in the photoDiaryApp.
  */
-var photoDiaryServices = angular.module('photoDiaryServices', ['ngResource'])
+var photoDiaryServices = angular.module('photoDiaryServices', ['ngResource']);
 
 photoDiaryServices.factory('diaryEntryService', ['$resource', 
   function ($resource) {
