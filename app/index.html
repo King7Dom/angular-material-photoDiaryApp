@@ -17,56 +17,40 @@
     <!-- Iron Elements -->
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
-    <!-- Paper Elements -->
-    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
-    <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
-    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html ">
-    <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
-    <link rel="import" href="bower_components/paper-menu/paper-menu.html">
-    <link rel="import" href="bower_components/paper-item/paper-item.html">
-    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <style is="custom-style">
-
-      paper-scroll-header-panel {
-        height: 100%;
-      }
-
-      .diary-content { 
-        background-color: var(--paper-grey-100);
-      }
-      
-    </style>
   </head>
   
-  <body ng-app="photoDiaryApp">
+  <body ng-app="photoDiaryApp" ng-controller="indexController" layout="row">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button ng-click="go('/')" class="md-icon-button">
+            <md-icon style="color:white">home</md-icon>
+          </md-button>
+          <h2>
+            <span>Photo Diary</span>
+          </h2>
+          <span flex />
+        </div>
+      </md-toolbar>
 
-    <paper-drawer-panel>
-      <paper-header-panel drawer>
-        <paper-toolbar>
-          <md-icon style="color: white;">face</md-icon>
-          <div class="title">Photo Diary</div>
-        </paper-toolbar>
-        <paper-menu>
-          <paper-item class="flex" role="listitem">
-            <a ng-href="#/diary">Diary</a>
-          </paper-item>
-          <paper-item class="flex" role="listitem">
-            <a ng-href="#/photo">Photos</a>
-          </paper-item>
-        </paper-menu>
-      </paper-header-panel><!-- End of drawer -->
-
-      <div ng-view="" main></div>
-
-    </paper-drawer-panel>
+      <md-list>
+        <md-subheader class="md-no-sticky">Main</md-subheader>
+          <md-list-item ng-click="go('/diary')">
+            <p flex>Diary</p>
+          </md-list-item>
+          <md-list-item ng-click="go('/photo')">
+            <p flex>Photos</p>
+          </md-list-item>
+      </md-list>
+    </md-sidenav>
+    <md-content ng-view="" flex></md-content>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -88,7 +72,6 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="bower_components/material-design-lite/material.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>

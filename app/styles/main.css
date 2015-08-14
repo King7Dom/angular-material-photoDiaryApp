@@ -28,11 +28,7 @@ body, html {
   width: 100%;
 }
 
-.diary-card {
-	width: 100%;
-}
-
-.diary-card  > .mdl-card__title {
-	height: 240px;
-	color: #fff;
+md-card > .md-card-image {
+  height: 240px;
+  object-fit: cover;
 }
