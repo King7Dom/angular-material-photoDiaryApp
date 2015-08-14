@@ -8,23 +8,23 @@
   </md-toolbar>
 
   <md-content>
-    <div class="mdl-grid" ng-repeat="diaryEntry in diaryEntries track by $index" ng-if="$index % 2 == 0">
-      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet" ng-repeat="i in [$index, $index + 1]" ng-if="diaryEntries[i] != null">
+    <div layout="column" layout-gt-sm="row" layout-wrap layout-padding>
 
+      <div ng-repeat="diaryEntry in diaryEntries" flex="50">
         <md-card>
-          <img ng-src="{{'/images/'+diaryEntries[i].img}}" class="md-card-image">
+          <img ng-src="{{'/images/'+diaryEntry.img}}" class="md-card-image">
           <md-card-content>
-            <h2 class="md-title">{{diaryEntries[i].title | limitTo: 35}}<span ng-if="diaryEntries[i].title.length > 35">...</span></h2>
+            <h2 class="md-title">{{diaryEntry.title | limitTo: 35}}<span ng-if="diaryEntry.title.length > 35">...</span></h2>
             <div>
-              {{diaryEntries[i].snippet}}
+              {{diaryEntry.snippet}}
             </div>
           </md-card-content>
           <div class="md-actions" layout="row" layout-align="end center">
-           <md-button ng-click="open($event, diaryEntries[i])">Read</md-button>
+           <md-button ng-click="open($event, diaryEntry)">Read</md-button>
          </div>
         </md-card>
-        
       </div>
+        
     </div>
   </md-content>
 </md-content>
