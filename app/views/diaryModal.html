@@ -1,7 +1,9 @@
-<md-dialog aria-label="Diary Entry">
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <h3><span>{{diaryEntry.title}}</span></h3>
+<md-dialog class="diaryModal" aria-label="Diary Entry">
+
+  <md-toolbar class="md-tall" ng-style="{'background':'url(/images/{{diaryEntry.img}}) center / cover'}">
+    <span flex></span>
+    <div class="md-toolbar-tools md-toolbar-tools-bottom">
+      <h3><strong>{{diaryEntry.title}}</strong></h3>
       <span flex></span>
       <md-button class="md-icon-button" ng-click="ok()" aria-label="Close Dialog">
         <md-icon>clear</md-icon>
@@ -11,4 +13,5 @@
   <md-dialog-content>
     {{diaryEntry.content}}
   </md-dialog-content>
+
 </md-dialog>

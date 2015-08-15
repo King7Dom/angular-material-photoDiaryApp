@@ -19,3 +19,12 @@ md-card > .md-card-image {
   height: 240px;
   object-fit: cover;
 }
+
+.diaryModal {
+  width: 500px;
+}
+
+.diaryModal > md-toolbar {
+  height: 240px;
+  max-height: 240px;
+}
