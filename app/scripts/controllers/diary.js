@@ -8,9 +8,9 @@
  * Controller of the photoDiaryApp
  */
 angular.module('photoDiaryApp')
-  .controller('DiaryCtrl', ['$scope', '$mdDialog', 'diaryEntryService', 
+  .controller('DiaryCtrl', ['$scope', '$mdDialog', 'diaryEntryService',
     function ($scope, $mdDialog, diaryEntryService) {
-      $scope.diaryEntries = diaryEntryService.diaryEntries();
+      $scope.photoDiary = diaryEntryService.diary();
 
       $scope.open = function(ev, item) {
         console.log("button click.");
@@ -24,6 +24,5 @@ angular.module('photoDiaryApp')
           }
         });
       };
-
     }
   ]);

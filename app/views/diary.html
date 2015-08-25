@@ -9,8 +9,7 @@
 
   <md-content>
     <div layout="column" layout-gt-sm="row" layout-wrap layout-padding>
-
-      <div ng-repeat="diaryEntry in diaryEntries" flex="50">
+      <div ng-repeat="diaryEntry in photoDiary.entries" flex="50">
         <md-card>
           <img ng-src="{{'/images/'+diaryEntry.img}}" class="md-card-image">
           <md-card-content>
@@ -24,7 +23,7 @@
          </div>
         </md-card>
       </div>
-        
     </div>
   </md-content>
+  
 </md-content>

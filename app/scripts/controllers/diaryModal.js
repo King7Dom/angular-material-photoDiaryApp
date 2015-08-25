@@ -13,7 +13,6 @@
       $scope.diaryEntry = item;
 
       $scope.ok = function () {
-        console.log("ok");
         $mdDialog.hide();
       };
     }
