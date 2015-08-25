@@ -20,7 +20,20 @@ photoDiaryServices.factory('diaryEntryService', ['$resource',
     });
 
     function getDiaryEntries() {
-      diary.entries = Diary.query();
+      Diary.query(
+        {name:"diary"}
+      ).$promise.then(
+        function(diaryEntries) {
+          diary.entries = diaryEntries;
+        },
+        function(error) {
+          console.debug("Error:");
+          console.debug(error);
+          Diary.query().$promise.then(function(sample) {
+            diary.entries = sample;
+          });
+        }
+      );
       return diary;
     }
 
